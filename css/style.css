@@ -1,0 +1,106 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Outfit", sans-serif;
+  min-height: 100vh;
+  background-color: #111729;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 50rem;
+  width: 90%;
+}
+
+.card {
+  width: 100%;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  border-radius: 8px;
+  background-color: #20293a;
+  background-image: url(../images/bg-image-random-quote.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  text-align: center;
+}
+.card__name {
+  color: white;
+  margin-bottom: 1rem;
+}
+.card__btn-box {
+  margin-bottom: 2.5rem;
+  display: flex;
+  gap: 1rem;
+}
+@media only screen and (max-width: 18.75em) {
+  .card__btn-box {
+    flex-direction: column;
+  }
+}
+.card__quote {
+  color: #4a5567;
+  font-size: 2.4rem;
+}
+
+.btn {
+  border-radius: 20px;
+  color: #6466e9;
+  border: solid 1px #6466e9;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.switch {
+  border: solid 1px #4a5567;
+  border-radius: 10px;
+  display: flex;
+}
+.switch__regroup, .switch__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+.switch__link {
+  border-left: solid 1px #4a5567;
+}
+
+/*# sourceMappingURL=style.css.map */

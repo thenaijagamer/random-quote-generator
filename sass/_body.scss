@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 50rem;
+  width: 90%;
+}
+
+.card {
+  width: 100%;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  border-radius: 8px;
+  background-color: $color-bg-card;
+  background-image: url(../images/bg-image-random-quote.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
+  text-align: center;
+
+  &__name {
+    color: white;
+    margin-bottom: 1rem;
+  }
+  &__btn-box {
+    margin-bottom: 2.5rem;
+    display: flex;
+    gap: 1rem;
+    @media only screen and (max-width: $bp-small-phone) {
+      flex-direction: column;
+    }
+  }
+  &__quote {
+    color: $color-text-dark;
+    font-size: 2.4rem;
+  }
+}
+
+.btn {
+  border-radius: 20px;
+  color: $color-button;
+  border: solid 1px $color-button;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-family: inherit;
+}
+.switch {
+  border: solid 1px $color-text-dark;
+  border-radius: 10px;
+  display: flex;
+  &__regroup,
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1.5rem;
+  }
+  &__link {
+    border-left: solid 1px $color-text-dark;
+  }
+}
