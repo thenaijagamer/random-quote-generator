@@ -55,7 +55,7 @@ body {
   background-color: #20293a;
   background-image: url(../images/bg-image-random-quote.svg);
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: right bottom;
   background-size: contain;
   text-align: center;
 }
@@ -66,12 +66,9 @@ body {
 .card__btn-box {
   margin-bottom: 2.5rem;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
-}
-@media only screen and (max-width: 18.75em) {
-  .card__btn-box {
-    flex-direction: column;
-  }
 }
 .card__quote {
   color: #4a5567;
@@ -99,8 +96,26 @@ body {
   align-items: center;
   padding: 1rem 1.5rem;
 }
+.switch__regroup img, .switch__link img {
+  cursor: pointer;
+}
 .switch__link {
   border-left: solid 1px #4a5567;
+}
+
+.custom-loader {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: conic-gradient(rgba(0, 0, 0, 0) 10%, #766df4);
+  -webkit-mask: radial-gradient(farthest-side, rgba(0, 0, 0, 0) calc(100% - 8px), #000 0);
+  animation: s3 1s infinite linear;
+}
+
+@keyframes s3 {
+  to {
+    transform: rotate(1turn);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

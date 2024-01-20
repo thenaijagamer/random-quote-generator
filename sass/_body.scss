@@ -17,7 +17,7 @@
   background-color: $color-bg-card;
   background-image: url(../images/bg-image-random-quote.svg);
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: right bottom;
   background-size: contain;
   text-align: center;
 
@@ -28,10 +28,12 @@
   &__btn-box {
     margin-bottom: 2.5rem;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1rem;
-    @media only screen and (max-width: $bp-small-phone) {
-      flex-direction: column;
-    }
+    // @media only screen and (max-width: $bp-small-phone) {
+    //   flex-direction: column;
+    // }
   }
   &__quote {
     color: $color-text-dark;
@@ -58,8 +60,25 @@
     justify-content: center;
     align-items: center;
     padding: 1rem 1.5rem;
+    img {
+      cursor: pointer;
+    }
   }
   &__link {
     border-left: solid 1px $color-text-dark;
+  }
+}
+
+.custom-loader {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: conic-gradient(#0000 10%, #766df4);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+  animation: s3 1s infinite linear;
+}
+@keyframes s3 {
+  to {
+    transform: rotate(1turn);
   }
 }
