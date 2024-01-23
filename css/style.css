@@ -95,12 +95,14 @@ body {
   justify-content: center;
   align-items: center;
   padding: 1rem 1.5rem;
-}
-.switch__regroup img, .switch__link img {
   cursor: pointer;
 }
 .switch__link {
   border-left: solid 1px #4a5567;
+}
+.switch__icon {
+  height: 24px;
+  width: 24px;
 }
 
 .custom-loader {
@@ -109,6 +111,7 @@ body {
   border-radius: 50%;
   background: conic-gradient(rgba(0, 0, 0, 0) 10%, #766df4);
   -webkit-mask: radial-gradient(farthest-side, rgba(0, 0, 0, 0) calc(100% - 8px), #000 0);
+  mask: radial-gradient(farthest-side, rgba(0, 0, 0, 0) calc(100% - 8px), #000 0);
   animation: s3 1s infinite linear;
 }
 

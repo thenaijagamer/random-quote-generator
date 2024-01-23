@@ -60,12 +60,19 @@
     justify-content: center;
     align-items: center;
     padding: 1rem 1.5rem;
-    img {
-      cursor: pointer;
-    }
+    cursor: pointer;
+    // height: 35px;
+    // width: 70px;
+    // &:hover .icon {
+    //   fill: red;
+    // }
   }
   &__link {
     border-left: solid 1px $color-text-dark;
+  }
+  &__icon {
+    height: 24px;
+    width: 24px;
   }
 }
 
@@ -75,6 +82,7 @@
   border-radius: 50%;
   background: conic-gradient(#0000 10%, #766df4);
   -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+  mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
   animation: s3 1s infinite linear;
 }
 @keyframes s3 {

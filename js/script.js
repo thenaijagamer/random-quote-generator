@@ -1,7 +1,6 @@
 "use strict";
 
 const generateRandom = () => {
-  document.querySelector(".custom-loader").style.display = "none";
   fetch("https://api.quotable.io/random")
     .then((response) => response.json())
     .then((data) => {
@@ -39,7 +38,7 @@ const generateRandom = () => {
       }
     })
     .catch((error) => {
-      console.log(error);
+      alert(error.message);
     });
 };
 
@@ -48,14 +47,5 @@ generateRandom();
 
 // Handle click event for random
 document
-  .querySelector(".switch__regroup img")
+  .querySelector(".switch__regroup")
   .addEventListener("click", generateRandom);
-
-// fetch("https://api.quotable.io/random")
-//   .then((response) => response.json())
-//   .then((data) => {
-//     console.log(data);
-//   })
-//   .catch((error) => {
-//     console.log(error);
-//   });
