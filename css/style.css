@@ -88,6 +88,7 @@ body {
 .switch {
   border: solid 1px #4a5567;
   border-radius: 10px;
+  overflow: hidden;
   display: flex;
 }
 .switch__regroup, .switch__link {
@@ -96,6 +97,13 @@ body {
   align-items: center;
   padding: 1rem 1.5rem;
   cursor: pointer;
+  transition: background-color 0.2s;
+}
+.switch__regroup:hover, .switch__link:hover {
+  background-color: #6466e9;
+}
+.switch__regroup:hover .switch__icon, .switch__link:hover .switch__icon {
+  fill: #6466e9;
 }
 .switch__link {
   border-left: solid 1px #4a5567;
@@ -103,6 +111,7 @@ body {
 .switch__icon {
   height: 24px;
   width: 24px;
+  transition: fill 0.2s;
 }
 
 .custom-loader {
